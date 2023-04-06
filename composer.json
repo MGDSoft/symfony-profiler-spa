@@ -1,0 +1,20 @@
+{
+    "name": "mgdsoft/symfony-profiler-spa",
+    "description": "Symfony profiler enabled from vanilla js",
+    "autoload": {
+        "psr-4": {
+            "MGDSoft\\SymfonyProfilerSPA\\Bundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miguel García Domínguez",
+            "email": "miguel.garcia@mgdsoftware.es"
+        }
+    ],
+    "require": {
+        "php":                          ">=8.0",
+        "symfony/framework-bundle":     "~5.0|~6.0",
+        "symfony/web-profiler-bundle":  "~5.0|~6.0"
+    }
+}

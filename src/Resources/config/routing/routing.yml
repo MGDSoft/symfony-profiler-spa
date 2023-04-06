@@ -1,0 +1,3 @@
+mgd_spa_toolbar_load:
+  path:      /toolbar/{token}
+  controller: mgd_profiler_spa.controller.load::loadToolbarAction
