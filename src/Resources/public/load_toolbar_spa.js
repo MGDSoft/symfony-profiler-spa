@@ -1,7 +1,7 @@
 (function () {
 
   let proxied = XMLHttpRequest.prototype.open
-  let barWasInjected = false
+  let toolbarWasInjected = false
 
   configureFetchSubscriber = function () {
 
@@ -14,7 +14,7 @@
       let tokenLink = response.headers.get('x-debug-token-link')
       let token = response.headers.get('X-Debug-Token')
 
-      if (barWasInjected || !tokenLink || !token) {
+      if (toolbarWasInjected || !tokenLink || !token) {
         return response
       }
 
@@ -35,7 +35,7 @@
         let tokenLink = self.getResponseHeader('x-debug-token-link')
         let token = self.getResponseHeader('X-Debug-Token')
 
-        if (self.readyState !== 4 || barWasInjected || !tokenLink || !token) {
+        if (self.readyState !== 4 || toolbarWasInjected || !tokenLink || !token) {
           return
         }
 
@@ -49,7 +49,7 @@
 
   injectToolBarFromToken = function(tokenLink, token) {
 
-    barWasInjected = true
+    toolbarWasInjected = true
     tokenLink = (new URL(tokenLink));
 
     fetch(tokenLink.origin + '/toolbar/' + token)
