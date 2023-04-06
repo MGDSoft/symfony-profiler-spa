@@ -5,7 +5,7 @@
 ![Licence](https://img.shields.io/badge/Licence-MIT-brightgreen)
 
 
-![alt text](./docs/symfony-profiler-spa.png)
+![example](https://github.com/MGDSoft/symfony-profiler-spa/blob/main/docs/example_profiler_spa.jpg?raw=true "asd")
 
 ### Here's a quick installation guide
 
