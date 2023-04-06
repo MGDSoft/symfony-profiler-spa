@@ -46,7 +46,7 @@ If you take a look inside `src/Resources/public/load_toolbar_spa.js`, you'll fin
 interceptor. The first `x-debug-token-link` header it detects will trigger a request to the API server to retrieve the
 profiler.
 
-Dont forget your nginx configuration
+Dont forget your nginx configuration to avoid cors 
 
 ```nginx
 add_header Access-Control-Allow-Origin "http://yourdomain.lol";
