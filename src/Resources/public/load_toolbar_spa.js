@@ -13,14 +13,14 @@
       }
 
       let tokenLink = self.getResponseHeader('x-debug-token-link')
+      let token = self.getResponseHeader('X-Debug-Token')
 
-      if (!tokenLink) {
+      if (!tokenLink || !token) {
         return
       }
 
       barWasInjected = true
 
-      let token = self.getResponseHeader('X-Debug-Token')
       tokenLink = (new URL(tokenLink));
 
       fetch(tokenLink.origin + '/toolbar/' + token)

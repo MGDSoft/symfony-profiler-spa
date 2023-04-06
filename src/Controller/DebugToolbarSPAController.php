@@ -10,8 +10,11 @@ use Twig\Environment;
 
 class DebugToolbarSPAController
 {
-    public function __construct(private Environment $twig)
+    private Environment $twig;
+
+    public function __construct(Environment $twig)
     {
+        $this->twig = $twig;
     }
 
     public function loadToolbarAction(string $token, Request $request): Response
