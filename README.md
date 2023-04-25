@@ -18,10 +18,11 @@ composer req mgdsoft/symfony-profiler-spa --dev
 Add the new route to your **API PROJECT**:
 
 ```yaml
-# config/routes/dev/mgd_profiler_spa.yaml
-mgd_profiler_spa:
-  resource: '@SymfonyProfilerSPABundle/Resources/config/routing/routing.yml'
-  prefix: /
+# config/routes/web_profiler.yaml
+when@dev:
+    mgd_profiler_spa:
+        resource: '@SymfonyProfilerSPABundle/Resources/config/routing/routing.yml'
+        prefix: /
 ```
 
 Create the asset or copy if you are not using asset component:
@@ -44,7 +45,9 @@ libraries. Interceptors available for XHR and fetch.
 
 For custom url toolbar you have to use this custom attribute `data-url-toolbar`
 
-<script src="//yourdomain.lol/bundles/symfonyprofilerspa/load_toolbar_spa.js" defer data-url-toolbar="{HOST}/internal/toolbar/{TOKEN}"></script>
+```html
+<script src="//yourdomain.lol/bundles/symfonyprofilerspa/load_toolbar_spa.js" defer data-url-toolbar="{ORIGIN}/internal/toolbar/{TOKEN}"></script>
+```
 
 ## How it works
 
