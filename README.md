@@ -40,6 +40,12 @@ to your **FRONTEND project**:
 That's all! The `load_toolbar_spa.js` is created in vanilla JavaScript, so it's available for use in all frameworks and
 libraries. Interceptors available for XHR and fetch.
 
+### JS Config
+
+For custom url toolbar you have to use this custom attribute `data-url-toolbar`
+
+<script src="//yourdomain.lol/bundles/symfonyprofilerspa/load_toolbar_spa.js" defer data-url-toolbar="{HOST}/internal/toolbar/{TOKEN}"></script>
+
 ## How it works
 
 If you take a look inside `src/Resources/public/load_toolbar_spa.js`, you'll find a simple script that creates an HTTP
@@ -47,6 +53,8 @@ interceptor. The first `x-debug-token-link` header it detects will trigger a req
 profiler.
 
 Dont forget your nginx configuration to avoid cors 
+
+````
 
 ```nginx
 add_header Access-Control-Allow-Origin "http://yourdomain.lol";
