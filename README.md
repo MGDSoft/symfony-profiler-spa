@@ -5,7 +5,7 @@
 ![Licence](https://img.shields.io/badge/Licence-MIT-brightgreen)
 
 
-![example](https://github.com/MGDSoft/symfony-profiler-spa/blob/main/docs/example_profiler_spa.jpg?raw=true "asd")
+![example](https://github.com/MGDSoft/symfony-profiler-spa/blob/main/docs/example_profiler_spa.png?raw=true "photo")
 
 ### Here's a quick installation guide
 
@@ -55,9 +55,7 @@ If you take a look inside `src/Resources/public/load_toolbar_spa.js`, you'll fin
 interceptor. The first `x-debug-token-link` header it detects will trigger a request to the API server to retrieve the
 profiler.
 
-Dont forget your nginx configuration to avoid cors 
-
-````
+Dont forget your nginx configuration to avoid cors
 
 ```nginx
 add_header Access-Control-Allow-Origin "http://yourdomain.lol";

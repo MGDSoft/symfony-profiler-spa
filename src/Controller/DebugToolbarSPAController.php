@@ -10,7 +10,8 @@ use Twig\Environment;
 
 class DebugToolbarSPAController
 {
-    private Environment $twig;
+    /** @var Environment  */
+    private $twig;
 
     public function __construct(Environment $twig)
     {
@@ -22,7 +23,7 @@ class DebugToolbarSPAController
         return new Response(
             $this->twig->render('@WebProfiler/Profiler/toolbar_js.html.twig', [
                 'full_stack' => false,
-                'excluded_ajax_paths' => true,
+                'excluded_ajax_paths' => false,
                 'token' => $token,
                 'request' => $request,
                 'csp_script_nonce' => null,
