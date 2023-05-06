@@ -23,7 +23,7 @@ class DebugToolbarSPAController
         return new Response(
             $this->twig->render('@WebProfiler/Profiler/toolbar_js.html.twig', [
                 'full_stack' => false,
-                'excluded_ajax_paths' => false,
+                'excluded_ajax_paths' => '\/_wdt/',
                 'token' => $token,
                 'request' => $request,
                 'csp_script_nonce' => null,
