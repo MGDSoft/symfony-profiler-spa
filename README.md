@@ -81,6 +81,6 @@ framework:
     ide: '%env(SYMFONY_IDE)%'
 ```
 
-Replace `/var/www/your-project/ with the current path of your project. It works using relative paths, so it will work in Docker. For more information, please visit https://www.develar.org/idea-rest-api/."
+Replace `/var/www/your-project/` with the current path of your project. It works using relative paths, so it will work in Docker. For more information, please visit https://www.develar.org/idea-rest-api/."
 
 Enjoy!
