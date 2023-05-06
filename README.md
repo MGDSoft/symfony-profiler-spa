@@ -55,6 +55,10 @@ If you take a look inside `src/Resources/public/load_toolbar_spa.js`, you'll fin
 interceptor. The first `x-debug-token-link` header it detects will trigger a request to the API server to retrieve the
 profiler.
 
+![example](https://github.com/MGDSoft/symfony-profiler-spa/blob/main/docs/example_profiler_spa_loading_profile.gif?raw=true "loading profile")
+
+## Trouble with CORS
+
 Dont forget your nginx configuration to avoid cors
 
 ```nginx
@@ -63,5 +67,20 @@ add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
 add_header Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-debug-token-link, X-Debug-Token";
 add_header Access-Control-Expose-Headers "X-Debug-Token, X-Debug-Token-Link";
 ```
+
+## Cool things
+
+Don't forget to configure your IDE to open errors/controllers, and for more information, please visit https://symfony.com/doc/current/reference/configuration/framework.html#ide.
+If you have trouble configuring PHPStorm, you can use this snippet for a quick solution.
+
+```yaml
+parameters:
+    env(SYMFONY_IDE): "javascript: (function () { let file = '%%f'; file = file.replace('/var/www/your-project/', ''); let newUrl = 'http://localhost:63342/api/file?file='+file+'&line=%%l'; fetch(newUrl); })()"
+
+framework:
+    ide: '%env(SYMFONY_IDE)%'
+```
+
+Replace `/var/www/your-project/ with the current path of your project. It works using relative paths, so it will work in Docker. For more information, please visit https://www.develar.org/idea-rest-api/."
 
 Enjoy!
