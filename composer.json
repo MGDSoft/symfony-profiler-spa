@@ -14,7 +14,7 @@
     ],
     "require": {
         "php":                          ">=7.0",
-        "symfony/framework-bundle":     "~5.0|~6.0",
-        "symfony/web-profiler-bundle":  "~5.0|~6.0"
+        "symfony/framework-bundle":     "~5.0|~6.0|~7.0",
+        "symfony/web-profiler-bundle":  "~5.0|~6.0|~7.0"
     }
 }
