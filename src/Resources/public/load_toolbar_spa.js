@@ -1,7 +1,7 @@
 var SFWDTSPA = (function () {
 
-  getConfValue = function (value) {
-    return document.currentScript.dataset[value]
+  function getConfValue(value) {
+    return document?.currentScript?.dataset[value]
   }
 
   const config = {urlToolbar: getConfValue('urlToolbar') ?? '{ORIGIN}/toolbar/{TOKEN}'}
@@ -9,7 +9,7 @@ var SFWDTSPA = (function () {
   let proxied = XMLHttpRequest.prototype.open
   let toolbarWasInjected = false
 
-  configureFetchSubscriber = function () {
+  function configureFetchSubscriber() {
 
     const {fetch: originalFetch} = window
     window.fetch = async (...args) => {
@@ -34,7 +34,7 @@ var SFWDTSPA = (function () {
     }
   }
 
-  configureXHRSubscriber = function () {
+  function configureXHRSubscriber() {
 
     XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
 
@@ -65,7 +65,7 @@ var SFWDTSPA = (function () {
     }
   }
 
-  injectToolBarFromToken = function (tokenLink, token) {
+  function injectToolBarFromToken(tokenLink, token) {
 
     toolbarWasInjected = true
     tokenLink = (new URL(tokenLink))
