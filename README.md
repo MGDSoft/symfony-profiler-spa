@@ -4,6 +4,7 @@
 ![php Version](https://img.shields.io/badge/php-7/8-blueviolet)
 ![Licence](https://img.shields.io/badge/Licence-MIT-brightgreen)
 
+This bundle allows you to integrate the Symfony profiler bar into your preferred JavaScript framework.
 
 ![example](https://github.com/MGDSoft/symfony-profiler-spa/blob/main/docs/example_profiler_spa.png?raw=true "photo")
 
