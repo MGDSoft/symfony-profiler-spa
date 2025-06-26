@@ -1,6 +1,7 @@
 {
     "name": "mgdsoft/symfony-profiler-spa",
     "description": "Symfony profiler enabled from vanilla js",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "MGDSoft\\SymfonyProfilerSPA\\Bundle\\": "src/"
