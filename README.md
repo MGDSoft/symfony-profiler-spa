@@ -1,6 +1,6 @@
 # Symfony profiler for your SPA (Single page application)
 
-![Symfony Sersion](https://img.shields.io/badge/Symfony-5/6-purple.svg?style=flat-square&logo=symfony)
+![Symfony Sersion](https://img.shields.io/badge/Symfony-5/6/7/8-purple.svg?style=flat-square&logo=symfony)
 ![php Version](https://img.shields.io/badge/php-7/8-blueviolet)
 ![Licence](https://img.shields.io/badge/Licence-MIT-brightgreen)
 
